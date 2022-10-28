@@ -4,11 +4,11 @@ import Share from '../Assets/shareIcon.svg'
 
 function ProfileHeader() {
     return (
-        <div className=' p-3'>
+        <div className='p-3 pt-8'>
             <div className='relative'>
                 <img src={Logo} alt="" className='rounded-full w-[20%] md:w-[15%] mx-auto' id='profile__img' />
 
-                <div className='absolute top-2 right-5 md:right-10 md:top-20 hover:bg-slate-300 p-3 md:p-5 rounded-full border-2 border-dashed hover:border-none'>
+                <div className='absolute top-0 right-5 md:right-72 md:top-0 hover:bg-slate-300 p-3 md:p-5 rounded-full border-2 border-dashed hover:border-none'>
                     <img src={Share} alt="" />
                 </div>
 
