@@ -1,22 +1,18 @@
 import './App.css';
-import LinkList from './Compoments/LinkList';
-import ProfileHeader from './Compoments/ProfileHeader';
-import Slack from './Assets/slack.png';
-import GitHub from './Assets/Icon.png';
 import Footer from './Compoments/Footer';
+import { Route, Routes } from 'react-router-dom';
+import Contact from './Pages/Contact';
+import Home from './Compoments/Home';
 
 function App() {
   return (
     <div className="md:container md:mx-auto">
-      <ProfileHeader />
-      <LinkList />
+      
 
-      <div className='flex justify-center gap-6 my-12'>
-
-        <a href="https://slack.com/earl"><img src={Slack} alt="" /></a>
-        <a href="https://github.com/EarlPappi"><img src={GitHub} alt="" /></a>
-
-      </div>
+      <Routes>
+        <Route path='/' element={ <Home/> }/>
+        <Route path='contact' element={ <Contact/> }/>
+      </Routes>
 
 
       <Footer />

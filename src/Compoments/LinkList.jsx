@@ -1,5 +1,6 @@
 import React from 'react'
-import Link from './Link'
+import { Link } from 'react-router-dom';
+import Linky from './Linky';
 
 const links = [
     {
@@ -45,11 +46,18 @@ const links = [
 function LinkList() {
     return (
         <div>
-            { links.map((link)=>{
-                return(
-                    <Link key={link.id} link={link}/>
-                )
-            }) }
+            <div>
+
+                {links.map((link) => {
+                    return (
+                        <Linky key={link.id} link={link} />
+                    )
+                })}
+            </div>
+
+            <Link to='contact' className='block bg-[#EAECF0] font-medium my-4 py-5 text-center w-11/12 mx-auto rounded-md hover:bg-slate-500'>Contact</Link>
+
+
         </div>
     )
 }
