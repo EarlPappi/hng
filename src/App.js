@@ -7,8 +7,6 @@ import Home from './Compoments/Home';
 function App() {
   return (
     <div className="md:container md:mx-auto">
-      
-
       <Routes>
         <Route path='/' element={ <Home/> }/>
         <Route path='contact' element={ <Contact/> }/>

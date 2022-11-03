@@ -1,9 +1,43 @@
 import React from 'react'
 
 function Contact() {
-  return (
-    <div>Contact</div>
-  )
+    return (
+        <div className='w-11/12 md:w-3/5 mx-auto my-8 mb-16'>
+            <form action="">
+                <h1 className='text-2xl font-bold '>Contact Me</h1>
+                <p>Hi there, contact me to ask me about anything you have in mind.</p>
+
+                <div className='flex flex-col md:flex-row mt-2 md:gap-4 md:my-3'>
+                    <div className='my-2 md:my-4 w-full md:w-1/2'>
+                        <label className='block font-semibold' htmlFor="first_name">First Name</label>
+                        <input className='border border-slate-300 p-2 rounded-xl w-full my-2' type="text" id='first_name' placeholder='Enter your first name' />
+                    </div>
+
+                    <div className='my-2 md:my-4 w-full md:w-1/2'>
+                        <label className='block font-semibold' htmlFor="last_name">Last Name</label>
+                        <input className='border border-slate-300 p-2 rounded-xl w-full my-2' type="text" id='last_name' placeholder='Enter your last name' />
+                    </div>
+                </div>
+
+                <div className='my-2 md:my-4'>
+                    <label className='block font-semibold' htmlFor="email">Email</label>
+                    <input className='border border-slate-300 p-2 rounded-xl w-full my-2' type="email" id='email' placeholder='yourname@email.com' />
+                </div>
+
+                <div className='my-2 md:my-4'>
+                    <label className='block font-semibold' htmlFor="message">Message</label>
+                    <textarea placeholder="Send me a message and I'll reply you as soon as possible..." className='border border-slate-300 p-2 rounded-xl w-full my-2' name="message" id="" cols="30" rows="10"></textarea>
+                </div>
+
+                <div className='flex gap-2 my-6'>
+                    <input type="checkbox" />
+                    <span>You agree to providing your data to Earl who may contact you.</span>
+                </div>
+
+                <button id='btn_submit' className='bg-[#1570EF] w-full p-3 rounded-xl text-white font-bold'>Send Message</button>
+            </form>
+        </div>
+    )
 }
 
 export default Contact;
