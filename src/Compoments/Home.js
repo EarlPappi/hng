@@ -11,7 +11,6 @@ function Home() {
             <LinkList />
 
             <div className='flex justify-center gap-6 my-12'>
-
                 <a href="https://slack.com/earl"><img src={Slack} alt="" /></a>
                 <a href="https://github.com/EarlPappi"><img src={GitHub} alt="" /></a>
 
