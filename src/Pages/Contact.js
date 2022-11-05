@@ -12,6 +12,8 @@ function Contact() {
     const [lastError, setLastError] = useState(false);
     const [emailError, setEmailError] = useState(false);
 
+    const [submit, setSubmit] = useState(false);
+
 
 
 
@@ -42,7 +44,9 @@ function Contact() {
             setIsError(false);
             setFirstError(false);
             setLastError(false);
-            setEmailError(false);    
+            setEmailError(false);  
+            
+            setSubmit(true)
             
             setFirst('');
             setLast('');
@@ -118,7 +122,7 @@ function Contact() {
                 </div>
 
                 <button id='btn_submit' className='bg-[#1570EF] hover:bg-[#175CD3] focus:bg-[#1570EF]  w-full p-3 rounded-xl text-white font-bold'>Send Message</button>
-                    { !isError && <p>Successfully submitted, redirecting to Home</p> }
+                    { submit && <p className='my-3 text-[#1570EF] text-semibold'>Successfully submitted, redirecting to Home</p> }
 
             </form>
         </div>
