@@ -4,7 +4,9 @@ import ProfileHeader from './ProfileHeader';
 import Slack from '../Assets/slack.png';
 import GitHub from '../Assets/Icon.png';
 
+
 function Home() {
+
     return (
         <div>
             <ProfileHeader />
@@ -14,7 +16,9 @@ function Home() {
                 <a href="https://slack.com/earl"><img src={Slack} alt="" /></a>
                 <a href="https://github.com/EarlPappi"><img src={GitHub} alt="" /></a>
 
-            </div>
+            </div>       
+
+
         </div>
     )
 }
