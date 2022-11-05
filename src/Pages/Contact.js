@@ -11,7 +11,6 @@ function Contact() {
     const [firstError, setFirstError] = useState(false);
     const [lastError, setLastError] = useState(false);
     const [emailError, setEmailError] = useState(false);
-    const [messageError, setMessageError] = useState(false);
 
 
     console.log(setMessage)
@@ -24,17 +23,24 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(first.trim().length === 0){
+        if (first.trim().length === 0) {
             setFirstError(true);
-        }else if(last.trim().length === 0){
-            setLastError(true)
-        }else if(!emailIncludes){
-            setEmailError(true)
-        }else if (message.trim().length === 0) {
-            setIsError(true);
             return
+        } if (last.trim().length === 0) {
+            setLastError(true)
+            return
+        } if (!emailIncludes) {
+            setEmailError(true)
+            return
+        } if (message.trim().length === 0) {
+            setIsError(true);
+            return;
+            
         } else {
             setIsError(false);
+            setFirstError(false);
+            setLastError(false);
+            setEmailError(false);            
         }
 
         navigate('/');
@@ -50,25 +56,36 @@ function Contact() {
                 <div className='flex flex-col md:flex-row mt-2 md:gap-4 md:my-3'>
                     <div className='my-2 md:my-4 w-full md:w-1/2'>
                         <label className='block font-semibold' htmlFor="first_name">First Name</label>
-                        <input required className='border border-slate-300 p-2 rounded-xl w-full my-2' type="text" id='first_name' placeholder='Enter your first name' onChange={(e) => {
+                        <input style={{
+                            boxShadow: firstError ? '0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #FFD3CC' : ''
+
+                        }} className='border border-slate-300 p-2 rounded-xl w-full my-2' type="text" id='first_name' placeholder='Enter your first name' onChange={(e) => {
                             setFirst(e.target.value);
-                            console.log(first)
                         }} />
+                        {firstError && <span className='text-[#F83F23] font-semibold'>First Name cannot be empty</span>}
                     </div>
 
                     <div className='my-2 md:my-4 w-full md:w-1/2'>
                         <label className='block font-semibold' htmlFor="last_name">Last Name</label>
-                        <input required className='border border-slate-300 p-2 rounded-xl w-full my-2' type="text" id='last_name' placeholder='Enter your last name' onChange={(e) => {
+                        <input style={{
+                            boxShadow: lastError ? '0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #FFD3CC' : ''
+
+                        }} className='border border-slate-300 p-2 rounded-xl w-full my-2' type="text" id='last_name' placeholder='Enter your last name' onChange={(e) => {
                             setLast(e.target.value)
                         }} />
+                        {lastError && <span className='text-[#F83F23] font-semibold'>Last Name cannot be empty</span>}
                     </div>
                 </div>
 
                 <div className='my-2 md:my-4'>
-                    <label className='block font-semibold' htmlFor="email">Email</label>
-                    <input required className='border border-slate-300 p-2 rounded-xl w-full my-2' type="email" id='email' placeholder='yourname@email.com' onChange={(e) => {
+                    <label  className='block font-semibold' htmlFor="email">Email</label>
+                    <input style={{
+                            boxShadow: emailError ? '0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #FFD3CC' : ''
+
+                        }}  className='border border-slate-300 p-2 rounded-xl w-full my-2' type="email" id='email' placeholder='yourname@email.com' onChange={(e) => {
                         setEmail(e.target.value)
                     }} />
+                    {emailError && <span className='text-[#F83F23] font-semibold'>Please Enter a valid email</span>}
                 </div>
 
                 <div className='my-2 md:my-4'>
@@ -83,7 +100,7 @@ function Contact() {
                 </div>
 
                 <div className='flex gap-2 my-6'>
-                    <input required type="checkbox" className='border-slate-300 md:w-5 md:h-5 rounded-xl' />
+                    <input type="checkbox" required className='border-slate-300 md:w-5 md:h-5 rounded-xl' />
                     <span>You agree to providing your data to Earl who may contact you.</span>
                 </div>
 
