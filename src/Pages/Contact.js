@@ -13,6 +13,8 @@ function Contact() {
     const [emailError, setEmailError] = useState(false);
 
 
+
+
     console.log(setMessage)
 
     const [isError, setIsError] = useState(false);
@@ -40,10 +42,20 @@ function Contact() {
             setIsError(false);
             setFirstError(false);
             setLastError(false);
-            setEmailError(false);            
+            setEmailError(false);    
+            
+            setFirst('');
+            setLast('');
+            setEmail('');
+            setMessage('');
         }
 
-        navigate('/');
+
+        setTimeout(()=>{
+            navigate('/');
+        }, 2000)
+
+        return
 
     };
 
@@ -69,6 +81,7 @@ function Contact() {
                         <label className='block font-semibold' htmlFor="last_name">Last Name</label>
                         <input style={{
                             boxShadow: lastError ? '0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #FFD3CC' : ''
+                            // boxShadow: firstError.length > 3 ? '0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #FFD3CC' : '0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #FFD3CC'
 
                         }} className='border border-slate-300 p-2 rounded-xl w-full my-2' type="text" id='last_name' placeholder='Enter your last name' onChange={(e) => {
                             setLast(e.target.value)
@@ -105,7 +118,7 @@ function Contact() {
                 </div>
 
                 <button id='btn_submit' className='bg-[#1570EF] hover:bg-[#175CD3] focus:bg-[#1570EF]  w-full p-3 rounded-xl text-white font-bold'>Send Message</button>
-
+                    { !isError && <p>Successfully submitted, redirecting to Home</p> }
 
             </form>
         </div>
