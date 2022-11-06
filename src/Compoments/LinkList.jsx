@@ -55,7 +55,7 @@ function LinkList() {
                 })}
             </div>
 
-            <Link to='contact' className='block bg-[#EAECF0] font-medium my-4 py-5 text-center w-11/12 mx-auto rounded-md hover:bg-slate-500'>Contact</Link>
+            <Link to='contact' id='contact' className='block bg-[#EAECF0] font-medium my-4 py-5 text-center w-11/12 mx-auto rounded-md hover:bg-slate-500'>Contact</Link>
 
 
         </div>

@@ -110,7 +110,7 @@ function Contact() {
                     <textarea placeholder="Send me a message and I'll reply you as soon as possible..." className='border border-slate-300 p-2 rounded-xl w-full my-2' style={{
                         boxShadow: isError ? '0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #FFD3CC' : '',
                         resize: 'none'
-                    }} name="message" id="" cols="30" rows="10" onChange={(e) => {
+                    }} name="message" id="message" cols="30" rows="10" onChange={(e) => {
                         setMessage(e.target.value)
                     }}></textarea>
                     {isError && <span className='text-[#F83F23] font-semibold'>Please enter a message</span>}
@@ -121,7 +121,7 @@ function Contact() {
                     <span>You agree to providing your data to Earl who may contact you.</span>
                 </div>
 
-                <button id='btn_submit' className='bg-[#1570EF] hover:bg-[#175CD3] focus:bg-[#1570EF]  w-full p-3 rounded-xl text-white font-bold'>Send Message</button>
+                <button id='btn__submit' className='bg-[#1570EF] hover:bg-[#175CD3] focus:bg-[#1570EF]  w-full p-3 rounded-xl text-white font-bold'>Send Message</button>
                     { submit && <p className='my-3 text-[#1570EF] text-semibold'>Successfully submitted, redirecting to Home</p> }
 
             </form>
