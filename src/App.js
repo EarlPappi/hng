@@ -9,7 +9,7 @@ function App() {
     <div className="md:container md:mx-auto">
       <Routes>
         <Route path='/' element={ <Home/> } />
-        <Route path='contact' element={ <Contact/> }/>
+        <Route path='/contact' element={ <Contact/> }/>
 
       </Routes>
 
