@@ -83,7 +83,7 @@ function Contact() {
 
                     <div className='my-2 md:my-4 w-full md:w-1/2'>
                         <label className='block font-semibold' htmlFor="last_name">Last Name</label>
-                        <input  style={{
+                        <input style={{
                             boxShadow: lastError ? '0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #FFD3CC' : ''
                             // boxShadow: firstError.length > 3 ? '0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #FFD3CC' : '0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #FFD3CC'
 
