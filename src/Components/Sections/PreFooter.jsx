@@ -7,17 +7,17 @@ function PreFooter() {
     return (
         <div className='bg-[#A02279] py-12'>
             <Wrapper>
-                <div>
-                    <div>
-                    <h1 className='w-11/12 text-[3.5em] leading-[120%]'>Metabnb NFTs</h1>
+                <div className='flex gap-12 items-center justify-between'>
+                    <div className='w-1/3'>
+                    <h1 className='w-11/12 text-[2.5em] text-white leading-[120%] mb-4'>Metabnb NFTs</h1>
 
-                    <p>Discover our NFT gift cards collection. Loyal customers gets amazing gift cards which are traded as NFTs. These NFTs gives our cutomer access to loads of our exclusive services.</p>
+                    <p className='w-10/12 text-white leading-[200%] my-8 font-thin'>Discover our NFT gift cards collection. Loyal customers gets amazing gift cards which are traded as NFTs. These NFTs gives our cutomer access to loads of our exclusive services.</p>
                     
-                    <Link>Learn More</Link>
+                    <Link to='/' className='bg-white text-[#A02279] px-4 py-2 rounded-sm'>Learn More</Link>
 
                     </div>
 
-                    <div>
+                    <div className='w-2/3'>
                         <img src={ preImg } alt="" />
 
                     </div>
