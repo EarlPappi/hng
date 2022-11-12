@@ -2,16 +2,27 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Wrapper from '../TinyComp/Wrapper'
 import footerLogo from '../../Asset/footerLogo.svg';
+import facebook from '../../Asset/footerFacebook.png'
+import instagram from '../../Asset/footerIG.png'
+import twitter from '../../Asset/footerTwitter.png'
 
 function Footer() {
   return (
-    <div className='bg-black py-8'>
+    <div className='bg-[#1D1D1E] py-12'>
         <Wrapper>
             <footer className='flex justify-between'>
-                <div>
-                    <div>
+                <div className='flex justify-between gap-4 flex-col h-max'>
+                    <div className='p-12 pl-0 pt-0'>
                         <img src={ footerLogo } alt="" />
                     </div>
+
+                    <div className='flex gap-4 p-12 pl-0'>
+                        <img src={facebook} alt="" />
+                        <img src={instagram} alt="" />
+                        <img src={twitter} alt="" />
+                    </div>
+
+                    <p className='text-white'>&copy; 2022 Metabnb</p>
 
                 </div>
 
