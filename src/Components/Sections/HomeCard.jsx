@@ -81,7 +81,7 @@ function HomeCard() {
             <div className='flex flex-wrap gap-2 my-8 justify-between'>
                 { cardCollection.map((collection)=>{
                     return(
-                        <div key={collection.title} className=''>
+                        <div key={collection.img} className=''>
                             <Card collection={ collection }/>
                         </div>
                     )
