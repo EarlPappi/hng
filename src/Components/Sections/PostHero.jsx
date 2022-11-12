@@ -8,7 +8,7 @@ function PostHero() {
   return (
     <div className='bg-[#A02279]'>
         <Wrapper>
-            <div className='flex justify-between items-center py-2 my-8'>
+            <div className='flex flex-col md:flex-row gap-5  justify-between items-center py-4 my-8'>
                 <img src={ mbToken  } alt="" />
                 <img src={ metaMask  } alt="" />
                 <img src={ openSea  } alt="" />

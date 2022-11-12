@@ -75,7 +75,7 @@ function HomeCard() {
     <div>
         <Wrapper>
             <div>
-            <h1 className='text-center font-bold text-[2.5em] text-black leading-[120%] mb-4 '>Inspiration for your next adventure</h1>
+            <h1 className='text-center font-bold text-[1.2em] md:text-[2.5em] text-black leading-[120%] mb-4 '>Inspiration for your next adventure</h1>
             </div>
 
             <div className='flex flex-wrap gap-2 my-8 justify-between'>
