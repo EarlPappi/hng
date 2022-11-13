@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 function PreFooter() {
     return (
-        <div className='bg-[#A02279] py-12'>
+        <div className='bg-[#A02279] py-[3em] mt-[5em]'>
             <Wrapper>
                 <div className='flex flex-col-reverse md:flex-row gap-12 items-center justify-between'>
                     <div className='w-full md:w-1/2'>

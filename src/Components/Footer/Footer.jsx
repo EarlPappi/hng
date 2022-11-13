@@ -8,7 +8,7 @@ import twitter from '../../Asset/footerTwitter.png'
 
 function Footer() {
     return (
-        <div className='bg-[#1D1D1E] py-12'>
+        <div className='bg-[#1D1D1E] py-12 '>
             <Wrapper>
                 <footer className='flex flex-col-reverse md:flex-row justify-between'>
                     <div className='flex justify-between gap-4 flex-col h-max w-full md:w-2/5'>
@@ -26,7 +26,7 @@ function Footer() {
 
                     </div>
 
-                    <div className='flex flex-wrap w-full md:w-3/5 justify-between my-8'>
+                    <div className='flex flex-wrap w-full md:w-3/5 justify-between my-8 md:my-0'>
                         <div>
                             <p className='font-bold text-[1.2em] text-white'>Commmunity</p>
 
@@ -40,7 +40,7 @@ function Footer() {
 
                         <div>
                             <p className='font-bold text-[1.2em] text-white'>Places</p>
-
+ 
                             <div className='flex flex-col gap-4 mt-4'>
                                 <Link to='/' className='text-white font-light'>Castle</Link>
                                 <Link to='/' className='text-white font-light'>Farm</Link>

@@ -8,7 +8,7 @@ function Header() {
     return (
         <header>
             <Wrapper>
-                <div className='py-4 flex justify-between items-baseline'>
+                <div className='py-4 flex justify-between items-baseline pb-12'>
                     <div className='w-1/2 md:w-1/4'>
                         <img src={Logo} alt="" />
 

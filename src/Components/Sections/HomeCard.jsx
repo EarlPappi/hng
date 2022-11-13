@@ -72,13 +72,13 @@ function HomeCard() {
 
 
   return (
-    <div>
+    <div className=''>
         <Wrapper>
             <div>
             <h1 className='text-center font-bold text-[1.2em] md:text-[2.5em] text-black leading-[120%] mb-4 '>Inspiration for your next adventure</h1>
             </div>
 
-            <div className='flex flex-wrap gap-2 my-8 justify-between'>
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-2 my-8 justify-between'>
                 { cardCollection.map((collection)=>{
                     return(
                         <div key={collection.img} className=''>
