@@ -12,9 +12,9 @@ function Footer() {
             <Wrapper>
                 <footer className='flex flex-col-reverse md:flex-row justify-between'>
                     <div className='flex justify-between gap-4 flex-col h-max w-full md:w-2/5'>
-                        <div className='p-12 pl-0 pt-0'>
+                        <Link to='/' className='p-12 pl-0 pt-0'>
                             <img src={footerLogo} alt="" />
-                        </div>
+                        </Link>
 
                         <div className='flex gap-4 p-12 pl-0'>
                             <img src={facebook} alt="" />
