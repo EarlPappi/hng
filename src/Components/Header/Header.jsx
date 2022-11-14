@@ -13,7 +13,7 @@ function Header() {
     return (
         <header>
             <Wrapper>
-                <div className='py-4 flex justify-between items-center pb-12'>
+                <div className='py-6 border-b-2 border-[#A02279] md:border-none flex justify-between items-center mb-12'>
                     <Link to='/' className='w-1/2 md:w-1/4'>
                         <img src={Logo} alt="" />
 
