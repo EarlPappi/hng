@@ -30,7 +30,7 @@ function Modal() {
 
                         <div className='flex justify-between my-4 items-center bg-[#F8F9FA] px-4 py-2 rounded-lg border border-[#CFD8DC]'>
                             <div className='flex items-center gap-8'>
-                                <div><img src={Meta}></img></div>
+                                <div><img src={Meta} alt=''></img></div>
                                 <h2 className='font-bold'>MetaMask</h2>
                             </div>
 
@@ -41,7 +41,7 @@ function Modal() {
 
                         <div className='flex justify-between my-4 items-center bg-[#F8F9FA] px-4 py-2 rounded-lg border border-[#CFD8DC]'>
                             <div className='flex items-center gap-8'>
-                                <div><img src={ WalletConnect }></img></div>
+                                <div><img src={ WalletConnect } alt=''></img></div>
                                 <h2 className='font-bold'>WalletConnect</h2>
                             </div>
 
