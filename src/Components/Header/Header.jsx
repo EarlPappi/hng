@@ -57,9 +57,14 @@ function Header() {
                                     <Link className='text-[1.2em] my-2 font-bold' to='/' onClick={()=>{
                                         setShowMenu(false)
                                     }}>NFTs</Link>
-                                    <Link className='text-[1.2em] my-2 font-bold' to='/' onClick={()=>{
+                                    <Link className='text-[1.2em] my-2 font-bold ' to='/' onClick={()=>{
                                         setShowMenu(false)
                                     }}>Community</Link>
+
+                                    <Link className='text-[1.2em] my-2 font-bold bg-[#A02279] px-4 py-2 rounded-lg text-white' onClick={()=>{
+                                        setShowMenu(false)
+                                        setShowWallet(true)
+                                    }}>Connect Wallet</Link>
                                 </div>
                             </nav>
 
