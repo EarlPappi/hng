@@ -13,9 +13,9 @@ function Card({ collection }) {
             <span className='font-bold text-right'>{ collection.cost }</span>
         </div>
         
-        <div className='flex gap-2 my-2'>
+        <div className='flex gap-2 justify-between my-2'>
             <span className='text-[0.'>{ collection.distance }</span>
-            <span className='text-[0'>{ collection.time }</span>
+            <span className='text-[0 '>{ collection.time }</span>
         </div>
 
         <div>
