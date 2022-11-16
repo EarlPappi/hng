@@ -20,8 +20,9 @@ import { useAuth } from "../../Store/Context";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.3),
+  borderRadius:  "10px",
+  color: "#667085",
+  backgroundColor: "white",
   "&:hover": {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
