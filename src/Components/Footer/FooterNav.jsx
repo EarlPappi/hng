@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 function FooterNav() {
     return (
-        <div>
+        <div className='py-8'>
             <Wrapper>
                 <div className='flex justify-between w-full'>
                     <div className='w-[10%]'>
