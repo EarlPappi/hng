@@ -7,12 +7,12 @@ function FooterNav() {
     return (
         <div className='py-8'>
             <Wrapper>
-                <div className='flex justify-between w-full'>
+                <div className='flex justify-between w-full gap-10 flex-col md:flex-row'>
                     <div className='w-[10%]'>
                         <Logo/>
                     </div>
 
-                    <div className='w-[30%]'>
+                    <div className='md:w-[30%]'>
                         <p className='text-[#6D6D6D] mb-4'>Product</p>
 
                         <nav className='flex justify-between flex-col gap-[2em]'>
@@ -23,7 +23,7 @@ function FooterNav() {
                         </nav>
                     </div>
 
-                    <div className='w-[30%]'>
+                    <div className='md:w-[30%]'>
                         <p className='text-[#6D6D6D] mb-4'>Company</p>
 
                         <nav className='flex justify-between flex-col gap-[2em]'>
@@ -34,10 +34,10 @@ function FooterNav() {
                         </nav>
                     </div>
 
-                    <div className='w-[30%]'>
+                    <div className='md:w-[30%]'>
                         <p className='text-[#6D6D6D] mb-4'>Activity</p>
 
-                        <nav className='flex justify-between flex-col gap-[2em]'>
+                        <nav className='flex justify-between flex-col gap-[2em] flex-wrap'>
                             <Link to='/' className='font-bold'>Events</Link>
                             <Link to='/' className='font-bold'>Customer Stories</Link>
                             <Link to='/' className='font-bold'>Features</Link>

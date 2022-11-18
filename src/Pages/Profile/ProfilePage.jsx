@@ -65,7 +65,7 @@ const ProfilePage = () => {
                             <div>
                                 {ResumeUploaded.map((resume) => {
                                     return (
-                                        <Upload resume={resume} key={resume.index} />
+                                        <Upload resume={resume} key={resume.id} />
                                     )
                                 })}
                             </div>

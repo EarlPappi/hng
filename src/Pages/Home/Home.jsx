@@ -49,7 +49,7 @@ const ProfilePage = () => {
                                     <p className='bg-[#D7EBE2] text-[#26704C] hidden md:block border-2 border-[#068850] px-2 py-1 text-[0.6em] font-bold rounded-lg'>Free Plan</p>
                                 </div>
 
-                                <Link to='/' className='font-bold text-white bg-[#0652DD] block text-center py-2 rounded-lg px-4'>Generate Cover Letter</Link>
+                                <Link to='/generate' className='font-bold text-white bg-[#0652DD] block text-center py-2 rounded-lg px-4'>Generate Cover Letter</Link>
 
                             </div>
 

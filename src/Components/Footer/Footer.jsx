@@ -10,7 +10,7 @@ function Footer() {
 
       <footer className='bg-[#F2F2F7] py-4 mt-8'>
         <Wrapper>
-          <nav className='flex justify-between'>
+          <nav className='flex justify-between gap-[1.2em] flex-wrap'>
             <Link to='/' className='text-[#6D6D6D]'>&#169; 2022 Cover. All rights reserved.</Link>
             <Link to='/' className='text-[#6D6D6D]'>Terms and Conditions</Link>
             <Link to='/' className='text-[#6D6D6D]'>Privacy Policy</Link>
