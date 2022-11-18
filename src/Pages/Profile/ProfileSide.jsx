@@ -1,13 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { EditIcon } from '../../../Icons'
+import { EditIcon } from './Icons'
 
 
-function SideHeader() {
+function ProfileSide() {
     return (
         <>
             <div className='flex justify-between gap-4 items-center'>
-                <div className='w-2/12 text-center rounded-full'>
+                <div className='w-2/12 text-center rounded-full h-max'>
                     <p className='bg-[#CDDCF8] py-6 font-bold rounded-full text-[#0652DD]'>B</p>
 
                 </div>
@@ -27,16 +26,16 @@ function SideHeader() {
                 </div>
             </div>
 
-            <div className='my-8 '>
+            {/* <div className='my-8 '>
                 <h1 className='font-bold text-[1.5em] border-b pb-4'>Profile</h1>
 
                 <Link to='/' className='font-bold text-white bg-[#0652DD] block text-center py-2 rounded-lg'>Account</Link>
 
 
-            </div>
+            </div> */}
         </>
 
     )
 }
 
-export default SideHeader
+export default ProfileSide

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import ProfileAccount from "../Profile/ProfileAccount";
-import ProfileSide from "../Profile/ProfileSide";
-import Upload from "../Profile/Upload";
+import ProfileAccount from "../Components/ProfilePage/ProfileAccount";
+import ProfileSide from "../Components/ProfilePage/ProfileSide";
+import Upload from "../Components/ProfilePage/Upload";
 
 
 const ProfilePage = () => {
