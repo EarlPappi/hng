@@ -10,7 +10,7 @@ const UserProfiles = <UserProfile />
 
 
 function ProfileAccount() {
-    const [showPassModal, setShowPassModal] = useState(true);
+    const [showPassModal, setShowPassModal] = useState(false);
 
 
     const AccountTabs = [
@@ -69,11 +69,11 @@ function ProfileAccount() {
 
                     </div>
 
-                    <div className='flex items-center mx-2 gap-4 justify-between' onClick={()=>{
+                    <div className='flex items-center mx-2 gap-4 justify-between ' onClick={() => {
                         setShowPassModal(true)
-                    }}>
-                        <span><EditIcon /></span>
-                        <span className='font-bold text-[0.8em] md:text-[1.2em]'>Change Password</span>
+                    }} >
+                        <span className='cursor-pointer'><EditIcon /></span>
+                        <span className='font-bold text-[0.8em] md:text-[1.2em] cursor-pointer'>Change Password</span>
                     </div>
 
                 </div>
@@ -81,8 +81,10 @@ function ProfileAccount() {
 
             </div>
 
-            <PasswordModal showPassModal={showPassModal} setShowPassModal={setShowPassModal}/>
+            {showPassModal &&
 
+                <PasswordModal showPassModal={showPassModal} setShowPassModal={setShowPassModal} />
+            }
         </div>
     )
 }
