@@ -26,6 +26,9 @@ function ProfileSide() {
                 </div>
             </div>
 
+            <h1 className='font-bold text-[1.5em] my-8'>Profile</h1>
+
+
             {/* <div className='my-8 '>
                 <h1 className='font-bold text-[1.5em] border-b pb-4'>Profile</h1>
 
