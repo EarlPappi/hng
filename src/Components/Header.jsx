@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import { MainIcon, HamburgerIcon, UserProfile } from '../Icons'
 import Wrapper from './Wrapper/Wrapper'
 
@@ -10,9 +11,9 @@ function Header() {
             <Wrapper>
 
                 <div className='flex justify-between items-center'>
-                    <div>
+                    <Link to='/'>
                         <MainIcon />
-                    </div>
+                    </Link>
 
                     <div className='flex gap-4 items-center'>
                         <p className='hidden md:block text-[#0652DD] font-semibold border-2 border-[#0652DD] py-2 px-4 rounded-lg'>History</p>

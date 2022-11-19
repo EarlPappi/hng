@@ -1,5 +1,5 @@
 import React from 'react'
-import { ChatIcon, UserProfile, LockIcon } from './Icons';
+import { ChatIcon, UserProfile, LockIcon, EditIcon } from './Icons';
 
 const ChatIcons = <ChatIcon />;
 const UserProfiles = <UserProfile />
@@ -41,15 +41,15 @@ function ProfileAccount() {
                             </div>
 
                             <div className='flex gap-4 flex-col'>
-                                <p className='font-bold text-[1.2em]'>{tab.mainText}</p>
-                                <p className='text-[#6D6D6D] font-semibold'>{tab.subText}</p>
+                                <p className='font-bold text-[0.9em] md:text-[1.2em]'>{tab.mainText}</p>
+                                <p className='text-[#6D6D6D] text-[0.8em] font-semibold'>{tab.subText}</p>
                             </div>
                         </div>
                     )
                 })}
 
-                <div className='flex gap-4 my-4 md:my-8 border-[#CAD0DD] border-t pt-4 md:pt-8 items-center'>
-                    <div className='flex gap-4 '>
+                <div className='flex justify-between gap-4 my-4 md:my-8 border-[#CAD0DD] border-t pt-4 md:pt-8 items-center'>
+                    <div className='flex gap-4 md:gap-4 '>
 
                         <div>
                             <LockIcon />
@@ -57,9 +57,15 @@ function ProfileAccount() {
                         </div>
 
                         <div>
-                            <p className='font-bold text-[1.2em]'>***************</p>
-                            <p>Password</p>
+                            <p className='font-bold text-[0.9em] md:text-[1.2em]'>**********</p>
+                            <p className='text-[#6D6D6D] text-[0.8em] font-semibold'>Password</p>
                         </div>
+
+                    </div>
+
+                    <div className='flex items-center mx-2 gap-4 justify-between'>
+                        <span><EditIcon /></span>
+                        <span className='font-bold text-[0.8em] md:text-[1.2em]'>Change Password</span>
                     </div>
 
                 </div>
