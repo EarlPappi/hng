@@ -38,7 +38,7 @@ function Header() {
                         }} className='absolute w-max h-max top-[4em] right-[0.5em] bg-white border rounded-md border-[#CAD0DD]'>
                             <p onClick={() => {
                                 setShowMenu(false)
-                            }} className='bg-errorMain inline px-4 py-2 '>X</p>
+                            }} className='bg-errorMain inline px-4 py-2  text-white font-bold'>X</p>
 
                             <p className='px-[4em] py-[2em] flex items-center gap-4 justify-center  border-b border-b-[#CAD0DD] hover:bg-primaryLight'>
                                 <span><UserProfile /></span>
