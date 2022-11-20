@@ -24,7 +24,7 @@ function Hero() {
       {/* modal here */}
       <div className="underlay w-full">
         <div className="flex justify-center align-center text-center bg-[#D0D5DD] mt-20 md:mx-[20%] md:w-[60%]  p-[2em] px-[3em] h-[400px]">
-          <div className="overlay bg-[#EAECF0] py-[1em] px-[3em] w-[90%] md:w-[60%] mx-auto ">
+          <div className="overlay bg-[#EAECF0] py-[1em] px-[3em] w-[90%] mx-auto ">
             <h1 className="my-[2em]">Uploading Sales Record</h1>
             <div>
               <ProgressBar />

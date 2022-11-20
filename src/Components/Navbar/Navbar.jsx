@@ -10,6 +10,7 @@ import { useAuth } from "../../Store/Context.js";
 import InsertDriveFileOutlinedIcon from "@mui/icons-material/InsertDriveFileOutlined";
 import AutoAwesomeMosaicOutlinedIcon from "@mui/icons-material/AutoAwesomeMosaicOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+import SearchIcon from "@mui/icons-material/Search";
 
 function Navbar() {
   const { clickHandler } = useAuth();
@@ -55,9 +56,7 @@ function Navbar() {
           </div>
           <div className="icons">
             <IconButton>
-              <Badge badgeContent={4} color="secondary">
-                <GridViewOutlinedIcon sx={{ color: "#1570EF", fontSize: 16 }} />
-              </Badge>
+              <GridViewOutlinedIcon sx={{ color: "#1570EF", fontSize: 16 }} />
             </IconButton>
           </div>
         </div>
@@ -83,9 +82,10 @@ function Navbar() {
               <BedtimeOutlinedIcon sx={{ color: "#1570EF", fontSize: 16 }} />
             </IconButton>
           </div>
-          <div className="icons">
+
+          <div className=" md:hidden icons">
             <IconButton>
-              <GridViewOutlinedIcon sx={{ color: "#1570EF", fontSize: 16 }} />
+              <SearchIcon sx={{ color: "#1570EF", fontSize: 16 }} />
             </IconButton>
           </div>
         </div>
@@ -99,7 +99,7 @@ export default Navbar;
 
 export const Footer = () => {
   return (
-    <div className="footer flex items-center justify-between mt-[2em] w-[80%] mx-auto">
+    <div className=" md:hidden marker:footer flex items-center justify-between mt-[2em] w-[80%] mx-auto">
       <div className="footer-item text-center">
         <InsertDriveFileOutlinedIcon />
         <p>Import Data</p>
