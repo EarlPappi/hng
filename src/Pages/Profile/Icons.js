@@ -159,3 +159,14 @@ export const ArrowLeft = ({ ...props }) => {
 
     )
 }
+
+export const SuccessIcon =({ ...props }) =>{
+    return (
+        <svg { ...props } width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="100" height="100" rx="50" fill="#E5FCF6"/>
+<rect x="10" y="8.75" width="80" height="80" rx="40" fill="#0FB56D"/>
+<path d="M32.4375 48.9904L43.9838 60.5366L67.5625 36.9629" stroke="#FCFCFC" stroke-width="5.50125" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+    )
+}
