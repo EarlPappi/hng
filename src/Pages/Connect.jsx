@@ -5,7 +5,7 @@ import Wallets from "../utils/wallets";
 
 function Connect() {
   const { appName } = useParams();
-  const { showWallet, setShowWallet } = useAuth();
+  const {  setShowWallet } = useAuth();
 
   const selectedWallet = Wallets.find((items) => items.permalink === appName);
 
