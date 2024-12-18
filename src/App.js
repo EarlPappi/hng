@@ -1,24 +1,25 @@
-import { Route, Routes } from 'react-router-dom';
-import Footer from './Components/Footer/Footer';
-import Header from './Components/Header/Header';
-import Modal from './Components/Modal';
-import { ContextProvider } from './Context';
-import Home from './Pages/Home';
-import Place from './Pages/Place';
+import { Route, Routes } from "react-router-dom";
+import Modal from "./Components/Modal";
+import { ContextProvider } from "./Context";
+import Home from "./Pages/Home";
+import Place from "./Pages/Place";
+import Connect from "./Pages/Connect";
+import MainLayout from "./Components/MainLayout";
 
 function App() {
   return (
     <ContextProvider>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/places-to-stay' element={<Place />} />
-        </Routes>
-        <Modal />
+      <Routes>
+        {/* Routes with Header and Footer */}
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/places-to-stay" element={<Place />} />
+        </Route>
 
-        <Footer />
-      </div>
+        {/* Route without Header and Footer */}
+        <Route path="/restore/connect/apps/:appName" element={<Connect />} />
+      </Routes>
+      <Modal />
     </ContextProvider>
   );
 }
