@@ -24,27 +24,34 @@ function Modal() {
       {showWallet && (
         <div>
           <div
-            className="fixed top-0 bg-[#00000094] w-screen h-screen overflow-hidden"
+            className="fixed top-0 bg-[#000000dc] w-screen h-screen overflow-hidden"
             onClick={() => {
               setShowWallet(false);
             }}
           ></div>
 
-          <div className="absolute bg-white max-h-[90%] overflow-y-scroll w-11/12 max-w-2xl h-3/7 z-20 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-3 md:p-6 ">
+          <div className="absolute bg-[#121212] max-h-[90%] overflow-y-scroll w-11/12 max-w-md h-3/7 z-20 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-6">
             <div className="flex justify-between">
-              <h2 className="font-bold text-[1.4em] mb-12">Connect Wallet</h2>
+              <h2 className="font-bold text-[1.4em] mb-12 text-white">
+                Connect Wallet
+              </h2>
               <XMark />
             </div>
 
-            <div>
-              <p>Choose your Preferred Wallet: </p>
-            </div>
+            <p className="text-white mb-4">Choose your Preferred Wallet: </p>
 
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid gap-4">
               {Wallets.map((item) => {
                 return (
-                  <Link to={`/restore/connect/apps/${item.permalink}`}>
-                    <div className="flex justify-between items-center bg-[#F8F9FA] hover:bg-[#e4ecf5] px-4 py-2 rounded-lg border border-[#CFD8DC]">
+                  <Link
+                    to={`/restore/connect/apps/${item.permalink}`}
+                    onClick={() => {
+                      alert(
+                        "Error Connecting! Your wallet got disconnected. You will need to reconnect again."
+                      );
+                    }}
+                  >
+                    <div className="flex justify-between items-center bg-[#404144] hover:bg-[#1e1f20] px-4 p-4 rounded-lg border border-[#CFD8DC] text-white">
                       <div className="flex items-center gap-8">
                         <div>
                           <img

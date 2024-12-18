@@ -1,11 +1,23 @@
 import React from "react";
 import Wrapper from "../TinyComp/Wrapper";
 import heroImg from "../../Asset/heroImg.png";
+import { useAuth } from "../../Context";
 
 function HeroSection() {
+  const { setShowWallet } = useAuth();
+
   return (
     <div>
       <Wrapper>
+        <button
+          className="bg-blue-500 text-white px-6 py-2 rounded-lg w-full md:hidden "
+          onClick={() => {
+            setShowWallet(true);
+          }}
+        >
+          Connect Wallet
+        </button>
+
         <section className="flex flex-col-reverse md:flex-row  gap-12 items-center my-12">
           <div className="flex flex-col w-full md:w-3/5 gap-8">
             <h1 className="md:w-11/12 text-[1.8em]  md:text-left md:text-[3.5em] leading-[120%]">
