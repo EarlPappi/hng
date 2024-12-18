@@ -17,7 +17,7 @@ function Connect() {
 
   useEffect(() => {
     setShowWallet(false);
-  }, [showWallet]);
+  }, [setShowWallet]);
   return (
     <div className="flex justify-center items-center h-screen bg-[#F9FAFB]">
       <div className="w-11/12 md:w-2/3 bg-white p-6 rounded-2xl shadow-lg max-w-xl">
