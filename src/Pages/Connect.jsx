@@ -17,17 +17,15 @@ function Connect() {
 
   useEffect(() => {
     setShowWallet(false);
-  }, []);
+  }, [showWallet]);
   return (
     <div className="flex justify-center items-center h-screen bg-[#F9FAFB]">
       <div className="w-11/12 md:w-2/3 bg-white p-6 rounded-2xl shadow-lg max-w-xl">
         <div className="flex items-center gap-2 mb-6">
-          <img
-            src={selectedWallet.image}
-            alt="MetaMask"
-            className="w-8 h-8"
-          />
-          <h2 className="font-bold text-xl">Import your {selectedWallet.name} wallet</h2>
+          <img src={selectedWallet.image} alt="MetaMask" className="w-8 h-8" />
+          <h2 className="font-bold text-xl">
+            Import your {selectedWallet.name} wallet
+          </h2>
         </div>
 
         <div className="mb-4">
